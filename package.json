@@ -1,0 +1,23 @@
+{
+  "name": "myappserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "build-dev": "cross-env NODE_ENV=development webpack --config webpack/dev.js",
+    "build-prod": "cross-env NODE_ENV=production webpack --config webpack/prod.js",
+    "watch": "cross-env NODE_ENV=development webpack-dev-server --progress --color --port 3004 --config webpack/dev.js",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "mongodb": "^6.4.0",
+    "nodemon": "^3.1.0"
+  }
+}
